@@ -22,7 +22,6 @@ public class MyList
 		//将指定集合添加到集合的末尾
 		list.addAll(c);
 		System.out.println(list);
-		
 	}
 
 }

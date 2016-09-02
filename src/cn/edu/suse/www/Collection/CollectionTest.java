@@ -2,22 +2,25 @@ package cn.edu.suse.www.Collection;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class CollectionTest {
 	public static void main(String[] args) {
 		Collection<Object> c = new ArrayList<Object>();
-		System.out.println(c.isEmpty());
+
 		c.add(1);
 		c.add(new Integer(100));
 		Object O = new Object();
 		c.add(O);
 		User u = new User("luogang", 12);
 		c.add(u);
+		
 		System.out.println(c.isEmpty());
 		System.out.println(c.size());
-		Object[] obs = c.toArray();
-		for(int i=0 ; i<obs.length;i++){
-			System.out.println(obs[i]);
+		
+		Iterator it = c.iterator();
+		while (it.hasNext()) {
+			System.out.println(it.next());
 		}
 		c.clear();
 		System.out.println(c.size());

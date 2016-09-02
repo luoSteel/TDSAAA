@@ -18,7 +18,7 @@ public class CollectionTest {
 		System.out.println(c.isEmpty());
 		System.out.println(c.size());
 		
-		Iterator it = c.iterator();
+		Iterator<Object> it = c.iterator();
 		while (it.hasNext()) {
 			System.out.println(it.next());
 		}

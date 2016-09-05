@@ -59,6 +59,10 @@ public class CollectionsTest {
 			System.out.println(object);
 		}
 		
+		//将ArrayList转换为线程安全的
+		List<Object> mylist = new ArrayList<Object>();
+		Collections.synchronizedList(mylist);
+		
 	}
 }
 class Person implements Comparable<Object>{

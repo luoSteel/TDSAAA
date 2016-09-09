@@ -2,6 +2,7 @@ package cn.edu.suse.www.Generic;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class ForeachTest {
 	public static void main(String[] args) {
@@ -10,6 +11,11 @@ public class ForeachTest {
 		list.add("123456");
 		for(String str:list){
 			System.out.println(str);
+		}
+		Iterator<String> it = list.iterator();
+		while (it.hasNext()) {
+			String string = (String) it.next();
+			System.out.println(string);
 		}
 	}
 }
